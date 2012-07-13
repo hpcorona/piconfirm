@@ -41,3 +41,9 @@
 - (id)JSONValue;
 
 @end
+
+@interface NSString (NSString_URLEncode)
+
+- (NSString*)URLEncoded;
+
+@end

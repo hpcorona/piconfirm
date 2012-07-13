@@ -94,10 +94,13 @@
 }
 
 - (IBAction)peticion {
-  NSString* pet = @"http://192.168.0.5/~Hilario/proveedores.json";
+  NSString* pet = @"http://10.211.55.3";
   //NSString* pet = @"http://www.google.com";
   [http peticion:pet notificar:self siTodoBien:@selector(respuesta:) error:@selector(error:)];
   texto.text = @"";
+  
+  NSString* test = @"%@ \"=?&hola";
+  NSLog(@"%@",[test URLEncoded]);
 }
 
 - (void)respuesta:(NSData*)datos {

@@ -134,3 +134,11 @@
 }
 
 @end
+
+@implementation NSString (NSString_URLEncode)
+
+- (NSString*)URLEncoded {
+  return (__bridge NSString *)CFURLCreateStringByAddingPercentEscapes(NULL, (__bridge CFStringRef)self, NULL, (CFStringRef)@"!*'();:@&=+$,/?%#[]", kCFStringEncodingUTF8);
+}
+
+@end
