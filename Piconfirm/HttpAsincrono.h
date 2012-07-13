@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "JSON/SBJson.h"
+#import "NSObject_Utils.h"
 
 @interface HttpAsincrono : NSObject {
 
@@ -29,21 +29,5 @@
 - (id)initWithIndicator:(UIActivityIndicatorView*)view;
 - (void)peticion:(NSString*)url notificar:(id)obj siTodoBien:(SEL)ok error:(SEL)err;
 - (void)cancelar;
-
-@end
-
-@interface NSData (NSData_ToUTF8String)
-
-- (NSString*)UTF8String;
-
-- (NSString*)ASCIIString;
-
-- (id)JSONValue;
-
-@end
-
-@interface NSString (NSString_URLEncode)
-
-- (NSString*)URLEncoded;
 
 @end

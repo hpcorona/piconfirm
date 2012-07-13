@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A8A28CAC15B0C68900C9158B /* NSObject_Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A28CAB15B0C68900C9158B /* NSObject_Utils.m */; };
 		A8EC142915B0119C00E61FF7 /* HttpAsincrono.m in Sources */ = {isa = PBXBuildFile; fileRef = A8EC142815B0119C00E61FF7 /* HttpAsincrono.m */; };
 		A8EC144515B01E3800E61FF7 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = A8EC142D15B01E3800E61FF7 /* NSObject+SBJson.m */; };
 		A8EC144615B01E3800E61FF7 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A8EC143015B01E3800E61FF7 /* SBJsonParser.m */; };
@@ -38,6 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A8A28CA915B0C66300C9158B /* NSObject_Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSObject_Utils.h; sourceTree = "<group>"; };
+		A8A28CAB15B0C68900C9158B /* NSObject_Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObject_Utils.m; sourceTree = "<group>"; };
 		A8EC142715B0119C00E61FF7 /* HttpAsincrono.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpAsincrono.h; sourceTree = "<group>"; };
 		A8EC142815B0119C00E61FF7 /* HttpAsincrono.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpAsincrono.m; sourceTree = "<group>"; };
 		A8EC142C15B01E3800E61FF7 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
@@ -207,6 +210,8 @@
 				A8ECA0C115AFF7CA00ABC7E1 /* PaginadorConsulta.m */,
 				A8EC142715B0119C00E61FF7 /* HttpAsincrono.h */,
 				A8EC142815B0119C00E61FF7 /* HttpAsincrono.m */,
+				A8A28CA915B0C66300C9158B /* NSObject_Utils.h */,
+				A8A28CAB15B0C68900C9158B /* NSObject_Utils.m */,
 			);
 			name = Global;
 			sourceTree = "<group>";
@@ -314,6 +319,7 @@
 				A8EC144E15B01E3800E61FF7 /* SBJsonTokeniser.m in Sources */,
 				A8EC144F15B01E3800E61FF7 /* SBJsonUTF8Stream.m in Sources */,
 				A8EC145015B01E3800E61FF7 /* SBJsonWriter.m in Sources */,
+				A8A28CAC15B0C68900C9158B /* NSObject_Utils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
