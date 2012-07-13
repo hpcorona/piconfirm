@@ -1,0 +1,290 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A8ECA09315AFEE4300ABC7E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8ECA09215AFEE4300ABC7E1 /* UIKit.framework */; };
+		A8ECA09515AFEE4300ABC7E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8ECA09415AFEE4300ABC7E1 /* Foundation.framework */; };
+		A8ECA09715AFEE4300ABC7E1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8ECA09615AFEE4300ABC7E1 /* CoreGraphics.framework */; };
+		A8ECA09D15AFEE4300ABC7E1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A8ECA09B15AFEE4300ABC7E1 /* InfoPlist.strings */; };
+		A8ECA09F15AFEE4300ABC7E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A8ECA09E15AFEE4300ABC7E1 /* main.m */; };
+		A8ECA0A315AFEE4300ABC7E1 /* PiconfirmAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A8ECA0A215AFEE4300ABC7E1 /* PiconfirmAppDelegate.m */; };
+		A8ECA0A615AFEE4300ABC7E1 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8ECA0A415AFEE4300ABC7E1 /* MainStoryboard.storyboard */; };
+		A8ECA0A915AFEE4300ABC7E1 /* PiconfirmMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8ECA0A815AFEE4300ABC7E1 /* PiconfirmMasterViewController.m */; };
+		A8ECA0AC15AFEE4300ABC7E1 /* PiconfirmDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8ECA0AB15AFEE4300ABC7E1 /* PiconfirmDetailViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A8ECA08E15AFEE4300ABC7E1 /* Piconfirm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Piconfirm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8ECA09215AFEE4300ABC7E1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A8ECA09415AFEE4300ABC7E1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A8ECA09615AFEE4300ABC7E1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A8ECA09A15AFEE4300ABC7E1 /* Piconfirm-Info.plist */ = {isa = PBXFileReference; path = "Piconfirm-Info.plist"; sourceTree = "<group>"; };
+		A8ECA09C15AFEE4300ABC7E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A8ECA09E15AFEE4300ABC7E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A8ECA0A015AFEE4300ABC7E1 /* Piconfirm-Prefix.pch */ = {isa = PBXFileReference; path = "Piconfirm-Prefix.pch"; sourceTree = "<group>"; };
+		A8ECA0A115AFEE4300ABC7E1 /* PiconfirmAppDelegate.h */ = {isa = PBXFileReference; path = PiconfirmAppDelegate.h; sourceTree = "<group>"; };
+		A8ECA0A215AFEE4300ABC7E1 /* PiconfirmAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PiconfirmAppDelegate.m; sourceTree = "<group>"; };
+		A8ECA0A515AFEE4300ABC7E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		A8ECA0A715AFEE4300ABC7E1 /* PiconfirmMasterViewController.h */ = {isa = PBXFileReference; path = PiconfirmMasterViewController.h; sourceTree = "<group>"; };
+		A8ECA0A815AFEE4300ABC7E1 /* PiconfirmMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PiconfirmMasterViewController.m; sourceTree = "<group>"; };
+		A8ECA0AA15AFEE4300ABC7E1 /* PiconfirmDetailViewController.h */ = {isa = PBXFileReference; path = PiconfirmDetailViewController.h; sourceTree = "<group>"; };
+		A8ECA0AB15AFEE4300ABC7E1 /* PiconfirmDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PiconfirmDetailViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A8ECA08B15AFEE4200ABC7E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8ECA09315AFEE4300ABC7E1 /* UIKit.framework in Frameworks */,
+				A8ECA09515AFEE4300ABC7E1 /* Foundation.framework in Frameworks */,
+				A8ECA09715AFEE4300ABC7E1 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A8ECA08315AFEE4200ABC7E1 = {
+			isa = PBXGroup;
+			children = (
+				A8ECA09815AFEE4300ABC7E1 /* Piconfirm */,
+				A8ECA09115AFEE4300ABC7E1 /* Frameworks */,
+				A8ECA08F15AFEE4300ABC7E1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A8ECA08F15AFEE4300ABC7E1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A8ECA08E15AFEE4300ABC7E1 /* Piconfirm.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A8ECA09115AFEE4300ABC7E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8ECA09215AFEE4300ABC7E1 /* UIKit.framework */,
+				A8ECA09415AFEE4300ABC7E1 /* Foundation.framework */,
+				A8ECA09615AFEE4300ABC7E1 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A8ECA09815AFEE4300ABC7E1 /* Piconfirm */ = {
+			isa = PBXGroup;
+			children = (
+				A8ECA0A115AFEE4300ABC7E1 /* PiconfirmAppDelegate.h */,
+				A8ECA0A215AFEE4300ABC7E1 /* PiconfirmAppDelegate.m */,
+				A8ECA0A415AFEE4300ABC7E1 /* MainStoryboard.storyboard */,
+				A8ECA0A715AFEE4300ABC7E1 /* PiconfirmMasterViewController.h */,
+				A8ECA0A815AFEE4300ABC7E1 /* PiconfirmMasterViewController.m */,
+				A8ECA0AA15AFEE4300ABC7E1 /* PiconfirmDetailViewController.h */,
+				A8ECA0AB15AFEE4300ABC7E1 /* PiconfirmDetailViewController.m */,
+				A8ECA09915AFEE4300ABC7E1 /* Supporting Files */,
+			);
+			path = Piconfirm;
+			sourceTree = "<group>";
+		};
+		A8ECA09915AFEE4300ABC7E1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A8ECA09A15AFEE4300ABC7E1 /* Piconfirm-Info.plist */,
+				A8ECA09B15AFEE4300ABC7E1 /* InfoPlist.strings */,
+				A8ECA09E15AFEE4300ABC7E1 /* main.m */,
+				A8ECA0A015AFEE4300ABC7E1 /* Piconfirm-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A8ECA08D15AFEE4200ABC7E1 /* Piconfirm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8ECA0AF15AFEE4300ABC7E1 /* Build configuration list for PBXNativeTarget "Piconfirm" */;
+			buildPhases = (
+				A8ECA08A15AFEE4200ABC7E1 /* Sources */,
+				A8ECA08B15AFEE4200ABC7E1 /* Frameworks */,
+				A8ECA08C15AFEE4200ABC7E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Piconfirm;
+			productName = Piconfirm;
+			productReference = A8ECA08E15AFEE4300ABC7E1 /* Piconfirm.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A8ECA08515AFEE4200ABC7E1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Piconfirm;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = A8ECA08815AFEE4200ABC7E1 /* Build configuration list for PBXProject "Piconfirm" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A8ECA08315AFEE4200ABC7E1;
+			productRefGroup = A8ECA08F15AFEE4300ABC7E1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A8ECA08D15AFEE4200ABC7E1 /* Piconfirm */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A8ECA08C15AFEE4200ABC7E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8ECA09D15AFEE4300ABC7E1 /* InfoPlist.strings in Resources */,
+				A8ECA0A615AFEE4300ABC7E1 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A8ECA08A15AFEE4200ABC7E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8ECA09F15AFEE4300ABC7E1 /* main.m in Sources */,
+				A8ECA0A315AFEE4300ABC7E1 /* PiconfirmAppDelegate.m in Sources */,
+				A8ECA0A915AFEE4300ABC7E1 /* PiconfirmMasterViewController.m in Sources */,
+				A8ECA0AC15AFEE4300ABC7E1 /* PiconfirmDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A8ECA09B15AFEE4300ABC7E1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A8ECA09C15AFEE4300ABC7E1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A8ECA0A415AFEE4300ABC7E1 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A8ECA0A515AFEE4300ABC7E1 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A8ECA0AD15AFEE4300ABC7E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		A8ECA0AE15AFEE4300ABC7E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A8ECA0B015AFEE4300ABC7E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Piconfirm/Piconfirm-Prefix.pch";
+				INFOPLIST_FILE = "Piconfirm/Piconfirm-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A8ECA0B115AFEE4300ABC7E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Piconfirm/Piconfirm-Prefix.pch";
+				INFOPLIST_FILE = "Piconfirm/Piconfirm-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A8ECA08815AFEE4200ABC7E1 /* Build configuration list for PBXProject "Piconfirm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8ECA0AD15AFEE4300ABC7E1 /* Debug */,
+				A8ECA0AE15AFEE4300ABC7E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8ECA0AF15AFEE4300ABC7E1 /* Build configuration list for PBXNativeTarget "Piconfirm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8ECA0B015AFEE4300ABC7E1 /* Debug */,
+				A8ECA0B115AFEE4300ABC7E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A8ECA08515AFEE4200ABC7E1 /* Project object */;
+}
