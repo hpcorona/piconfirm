@@ -25,6 +25,9 @@
 @property (strong, nonatomic) IBOutlet UITextField *observacionesField;
 @property (strong, nonatomic) IBOutlet UITextView *texto;
 
+@property (strong, nonatomic) IBOutlet UITextField *nombreField;
+@property (strong, nonatomic) IBOutlet UITextField *edadField;
+
 - (IBAction)alta;
 - (IBAction)peticion;
 

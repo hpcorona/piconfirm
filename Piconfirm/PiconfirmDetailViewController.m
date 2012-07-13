@@ -21,6 +21,7 @@
 @synthesize masterPopoverController = _masterPopoverController;
 
 @synthesize guiaField,tripField,fechaField,observacionesField,texto;
+@synthesize nombreField,edadField;
 
 #pragma mark - Managing the detail item
 
@@ -94,26 +95,53 @@
 }
 
 - (IBAction)peticion {
-  NSString* pet = @"http://10.211.55.3";
-  //NSString* pet = @"http://www.google.com";
+  //NSString* pet = @"http://10.211.55.3";
+  NSString* pet = @"http://10.211.55.3/PRUEBASMAKIAVELIKAS_WEB/UK/PAGE_JSON.awp?comando=personas";
   [http peticion:pet notificar:self siTodoBien:@selector(respuesta:) error:@selector(error:)];
-  texto.text = @"";
-  
-  NSString* test = @"%@ \"=?&hola";
-  NSLog(@"%@",[test URLEncoded]);
 }
 
 - (void)respuesta:(NSData*)datos {
-  texto.text = [datos ASCIIString];
+  NSDictionary *json = [datos JSONValue];
   
-  NSDictionary *dict = [datos JSONValue];
+  NSLog(@"Estatus: %@", [json objectForKey:@"status"]);
   
-  NSLog(@"Valor: %@",[dict objectForKey:@"status"]);
+  NSArray *listado = [json objectForKey:@"list"];
+  NSLog(@"Registros: %d", [listado count]);
+  
+  NSMutableArray *mod;
+  
+  for (int i = 0; i < [listado count]; i++) {
+    NSDictionary *persona = [listado objectAtIndex:i];
+    
+    NSLog(@"Nombre %@, Edad %d",[persona objectForKey:@"Nombre"],[[persona objectForKey:@"Edad"] intValue]);
+  }
   
 }
 
 - (void)error:(NSError*)error {
   texto.text = error.domain;
 }
+
+- (IBAction)guardarEnWebDev:(id)sender {
+  NSString *peticion = [NSString stringWithFormat:@"http://10.211.55.3/PRUEBASMAKIAVELIKAS_WEB/UK/PAGE_JSON.awp?comando=alta&nombre=%@&edad=%@",[nombreField.text URLEncoded],[edadField.text URLEncoded]];
+  
+  [http peticion:peticion notificar:self siTodoBien:@selector(todoBien:) error:@selector(error:)];
+}
+
+- (void)todoBien:(NSData*)datos {
+  texto.text = [datos UTF8String];
+  nombreField.text = @"";
+  edadField.text = @"";
+}
+
+
+
+
+
+
+
+
+
+
 
 @end
