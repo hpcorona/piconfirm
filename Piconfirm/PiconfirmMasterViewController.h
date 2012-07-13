@@ -13,5 +13,6 @@
 @interface PiconfirmMasterViewController : UITableViewController
 
 @property (strong, nonatomic) PiconfirmDetailViewController *detailViewController;
+@property (strong, nonatomic) IBOutlet UITableView *tabla;
 
 @end

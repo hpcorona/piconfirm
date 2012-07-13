@@ -7,6 +7,7 @@
 //
 
 #import "PiconfirmDetailViewController.h"
+#import "Reporte.h"
 
 @interface PiconfirmDetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -18,6 +19,8 @@
 @synthesize detailItem = _detailItem;
 @synthesize detailDescriptionLabel = _detailDescriptionLabel;
 @synthesize masterPopoverController = _masterPopoverController;
+
+@synthesize guiaField,tripField,fechaField,observacionesField,texto;
 
 #pragma mark - Managing the detail item
 
@@ -49,6 +52,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
   [self configureView];
+  
+  http = [[HttpAsincrono alloc] initWithView:self.view withCenter:texto];
 }
 
 - (void)viewDidUnload
@@ -77,6 +82,35 @@
     // Called when the view is shown again in the split view, invalidating the button and popover controller.
     [self.navigationItem setLeftBarButtonItem:nil animated:YES];
     self.masterPopoverController = nil;
+}
+
+- (IBAction)alta {
+  Reporte *rep = [[Reporte alloc] init];
+  rep.guia = guiaField.text;
+  rep.trip = tripField.text;
+  rep.fecha = fechaField.text;
+  rep.observaciones = observacionesField.text;
+  [rep alta];
+}
+
+- (IBAction)peticion {
+  NSString* pet = @"http://192.168.0.5/~Hilario/proveedores.json";
+  //NSString* pet = @"http://www.google.com";
+  [http peticion:pet notificar:self siTodoBien:@selector(respuesta:) error:@selector(error:)];
+  texto.text = @"";
+}
+
+- (void)respuesta:(NSData*)datos {
+  texto.text = [datos ASCIIString];
+  
+  NSDictionary *dict = [datos JSONValue];
+  
+  NSLog(@"Valor: %@",[dict objectForKey:@"status"]);
+  
+}
+
+- (void)error:(NSError*)error {
+  texto.text = error.domain;
 }
 
 @end

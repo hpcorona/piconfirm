@@ -9,15 +9,25 @@
 #import "PiconfirmMasterViewController.h"
 
 #import "PiconfirmDetailViewController.h"
+#import "ReporteProvider.h"
 
 @interface PiconfirmMasterViewController () {
-    NSMutableArray *_objects;
+  ReporteProvider *listado;
 }
 @end
 
 @implementation PiconfirmMasterViewController
 
 @synthesize detailViewController = _detailViewController;
+@synthesize tabla;
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+  self = [super initWithCoder:aDecoder];
+  if (self) {
+    listado = [[ReporteProvider alloc] init];
+  }
+  return self;
+}
 
 - (void)awakeFromNib
 {
@@ -50,12 +60,16 @@
 
 - (void)insertNewObject:(id)sender
 {
+  /*
     if (!_objects) {
         _objects = [[NSMutableArray alloc] init];
     }
     [_objects insertObject:[NSDate date] atIndex:0];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+   */
+  [listado reload];
+  [tabla reloadData];
 }
 
 #pragma mark - Table View
@@ -67,15 +81,15 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-  return _objects.count;
+  return listado.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
 
-  NSDate *object = [_objects objectAtIndex:indexPath.row];
-  cell.textLabel.text = [object description];
+  Reporte *object = [listado objectAtIndex:indexPath.row];
+  cell.textLabel.text = object.trip;
     return cell;
 }
 
@@ -88,8 +102,8 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [_objects removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+//        [_objects removeObjectAtIndex:indexPath.row];
+//        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
     }
@@ -113,8 +127,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSDate *object = [_objects objectAtIndex:indexPath.row];
-    self.detailViewController.detailItem = object;
+//    NSDate *object = [_objects objectAtIndex:indexPath.row];
+//    self.detailViewController.detailItem = object;
 }
 
 @end

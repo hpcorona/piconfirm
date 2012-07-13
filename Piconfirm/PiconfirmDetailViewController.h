@@ -7,11 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HttpAsincrono.h"
 
-@interface PiconfirmDetailViewController : UIViewController <UISplitViewControllerDelegate>
+@interface PiconfirmDetailViewController : UIViewController <UISplitViewControllerDelegate> {
+  
+  HttpAsincrono *http;
+  
+}
 
 @property (strong, nonatomic) id detailItem;
 
 @property (strong, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+
+@property (strong, nonatomic) IBOutlet UITextField *guiaField;
+@property (strong, nonatomic) IBOutlet UITextField *tripField;
+@property (strong, nonatomic) IBOutlet UITextField *fechaField;
+@property (strong, nonatomic) IBOutlet UITextField *observacionesField;
+@property (strong, nonatomic) IBOutlet UITextView *texto;
+
+- (IBAction)alta;
+- (IBAction)peticion;
 
 @end
